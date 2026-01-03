@@ -1,3 +1,24 @@
+# pg_backup.sh
+#
+# Purpose:
+# Automates PostgreSQL logical backups and validates backup integrity
+# by performing a restore test on a staging database.
+#
+# Key Features:
+# - Uses pg_dump with custom format for efficient backups
+# - Performs restore validation using pg_restore
+# - Implements basic retention management (7-day retention)
+# - Logs job status for monitoring and troubleshooting
+#
+# Intended Usage:
+# - Scheduled via cron during low-traffic periods
+# - Executed on a secure host with access to PostgreSQL utilities
+#
+# Notes:
+# - Restore validation is required to consider a backup successful
+# - Script assumes appropriate PostgreSQL authentication is configured
+
+
 # PostgreSQL DBA Automation & Maintenance Scripts
 
 This repository contains practical examples of PostgreSQL database administration tasks focused on automation, reliability, and performance.  
